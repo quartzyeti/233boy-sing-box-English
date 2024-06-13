@@ -167,7 +167,7 @@ download() {
         ;;
     sh)
         link=https://github.com/${is_sh_repo}/releases/latest/download/code.tar.gz
-        name="$is_core_name 脚本"
+        name="$is_core_name scripts"
         tmpfile=$tmpsh
         is_ok=$is_sh_ok
         ;;
