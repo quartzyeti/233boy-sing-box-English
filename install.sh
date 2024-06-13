@@ -1,7 +1,7 @@
 #!/bin/bash
 
 author=quartzyeti
-# github=https://github.com/233boy/sing-box
+# github=https://github.com/quartzyeti/sing-box
 
 # bash fonts colors
 red='\e[31m'
