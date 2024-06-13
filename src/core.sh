@@ -1078,7 +1078,7 @@ get() {
         is_lower=${2,,}
         net=
         is_users="users:[{uuid:\"$uuid\"}]"
-        is_tls_json = 'tls:{enabled:true,alpn:["h3"],key_path:"'$is_tls_key'",certificate_path:"'$is_tls_cer'"}'
+        is_tls_json='tls:{enabled:true,alpn:["h3"],key_path:"'$is_tls_key'",certificate_path:"'$is_tls_cer'"}'
         case $is_lower in
         vmess*)
             is_protocol=vmess
