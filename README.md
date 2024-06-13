@@ -46,7 +46,7 @@ Installation and usage: https://233boy.com/sing-box/sing-box-script/
 
 # And for the quick & lazy...
 ```
-bash <(wget -qO- -o- https://github.com/quartzyeti/sing-box/raw/main/install.sh)
+bash <(wget -qO- -o- https://github.com/233boy/sing-box/raw/main/install.sh)
 ```
 
 
