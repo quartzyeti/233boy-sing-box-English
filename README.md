@@ -44,6 +44,13 @@ The script parameters are very efficient and super easy to use. Please master th
 
 Installation and usage: https://233boy.com/sing-box/sing-box-script/
 
+# And for the quick & lazy...
+```
+bash <(wget -qO- -o- https://github.com/quartzyeti/sing-box/raw/main/install.sh)
+```
+
+
+
 # help
 
 Use: `sing-box help`
