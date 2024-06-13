@@ -1,3 +1,5 @@
+All I did was translate some of the script into English. I probably broke everything in the process. I don’t know what I’m doing. I say that cooking in the kitchen. I say that to my computer too.  -quartzyeti
+
 # introduce
 
 The best sing-box one-click installation script & management script
