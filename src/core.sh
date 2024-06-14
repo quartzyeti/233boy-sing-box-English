@@ -35,7 +35,7 @@ ss_method_list=(
 mainmenu=(
     "Add Configuration"
     "Change the Configuration"
-    "View configuration"
+    "View Configuration"
     "Delete Configuration"
     "Run Management"
     "Update"
@@ -46,7 +46,7 @@ mainmenu=(
 )
 info_list=(
     "Protocol"
-    "address"
+    "Address"
     "Port"
     "User ID (id)"
     "Transmission protocol (network)"
@@ -55,17 +55,17 @@ info_list=(
     "path"
     "Transport Layer Security (TLS)"
     "Application Layer Protocol Negotiation (Alpn)"
-    "password"
+    "Password"
     "Encryption"
     "Link (URL)"
-    "Destination address (remote addr)"
-    "Destination port (remote port)"
+    "Destination Address (remote addr)"
+    "Destination Port (remote port)"
     "Flow"
-    "SNI (serverName)"
+    "SNI (servername)"
     "Fingerprint"
     "Public key"
     "Username"
-    "Skip certificate verification (allowInsecure)"
+    "Skip Certificate Verification (allowInsecure)"
     "Congestion Control Algorithm (congestion_control)"
 )
 change_list=(
@@ -73,14 +73,14 @@ change_list=(
     "Change Port"
     "Change Domain Name"
     "Change Path"
-    "change password"
+    "change Password"
     "Change UUID"
-    "Change encryption method"
+    "Change Encryption Method"
     "Change Destination Address"
     "Change Destination Port"
     "Change Key"
     "Change SNI (serverName)"
-    "Change cloaking site"
+    "Change Cloaking Site"
     "Change Username"
 )
 servername_list=(
@@ -129,7 +129,7 @@ get_port() {
     while :; do
         ((is_count++))
         if [[ $is_count -ge 233 ]]; then
-            err "The number of failures to automatically obtain an available port has reached 233 times, please check the port occupancy."
+            err "The number of failed attempts to obtain available ports has reached 233, please check the port usage."
         fi
         tmp_port=$(shuf -i 445-65535 -n 1)
         [[ ! $(is_test port_used $tmp_port) && $tmp_port != $port ]] && break
