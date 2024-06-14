@@ -20,7 +20,7 @@ show_help() {
             "   c, change [name] [option] [args... | auto]      Change Configuration"
             "   d, del [name]                                   Delete Configuration**"
             "   i, info [name]                                  View Configuration"
-            "   qr [name]                                       QR code Information"
+            "   qr [name]                                       QR Code Information"
             "   url [name]                                      URL Information"
             "   log                                             View Log"
             # "   logerr                                          Viewing the Error Log\n"
@@ -49,7 +49,7 @@ show_help() {
             "   import                                          Import xray/v2ray Script Configuration\n"
             "Management:"
             "   un, uninstall                                   Uninstall the Script"
-            "   u, update [core | sh | caddy] [ver]             update"
+            "   u, update [core | sh | caddy] [ver]             Update"
             "   U, update.sh                                    Update Script"
             "   s, status                                       Check Operational Status"
             "   start, stop, restart [caddy]                    Start, Stop, Restart"
@@ -71,7 +71,7 @@ show_help() {
             msg "$v"
         done
         msg "Be careful with del, ddel, this option deletes the configuration directly; no confirmation is needed!"
-        msg "Feedback questions) $(msg_ul https://github.com/${is_sh_repo}/issues) "
+        msg "Feedback questions) $(msg_ul https://github.com/233boy/sing-box/issues) "
         msg "Documentation(doc) $(msg_ul https://233boy.com/$is_core/$is_core-script/)"
         ;;
 
@@ -85,7 +85,7 @@ about() {
     msg "Website: $(msg_ul https://233boy.com)"
     msg "Channel: $(msg_ul https://t.me/tg2333)"
     msg "Group: $(msg_ul https://t.me/tg233boy)"
-    msg "Github: $(msg_ul https://github.com/${is_sh_repo})"
+    msg "Github: $(msg_ul https://github.com/233boy/sing-box)"
     msg "Twitter: $(msg_ul https://twitter.com/ai233boy)"
     msg "$is_core_name site: $(msg_ul https://sing-box.sagernet.org/)"
     msg "$is_core_name core: $(msg_ul https://github.com/${is_core_repo})"
