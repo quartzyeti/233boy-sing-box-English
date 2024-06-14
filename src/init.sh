@@ -34,8 +34,8 @@ _mkdir() {
     mkdir -p "$@"
 }
 
-is_err=$(_red_bg 错误!)
-is_warn=$(_red_bg 警告!)
+is_err=$(_red_bg errors!)
+is_warn=$(_red_bg warnings!)
 
 err() {
     echo -e "\n$is_err $@\n"
@@ -70,7 +70,7 @@ amd64 | x86_64)
     is_arch="arm64"
     ;;
 *)
-    err "此脚本仅支持 64 位系统..."
+    err "This script is only supported on 64-bit systems..."
     ;;
 esac
 
