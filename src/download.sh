@@ -5,7 +5,7 @@ get_latest_version() {
         url="https://api.github.com/repos/${is_core_repo}/releases/latest?v=$RANDOM"
         ;;
     sh)
-        name="$is_core_name 脚本"
+        name="$is_core_name scripts"
         url="https://api.github.com/repos/$is_sh_repo/releases/latest?v=$RANDOM"
         ;;
     caddy)
@@ -38,7 +38,7 @@ download() {
         chmod +x $is_core_bin
         ;;
     sh)
-        name="$is_core_name 脚本"
+        name="$is_core_name scripts"
         tmpfile=$tmpdir/sh.tar.gz
         link="https://github.com/${is_sh_repo}/releases/download/${latest_ver}/code.tar.gz"
         download_file

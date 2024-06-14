@@ -1,3 +1,10 @@
+All I did was translate some of the script into English. I probably broke everything in the process. I don’t know what I’m doing. I say that cooking in the kitchen. I say that to my computer too.  -quartzyeti
+
+# And for the quick & lazy...
+```
+bash <(wget -qO- -o- https://github.com/quartzyeti/233boy-sing-box-English/raw/main/install.sh)
+```
+
 # introduce
 
 The best sing-box one-click installation script & management script
@@ -43,13 +50,6 @@ The script parameters are very efficient and super easy to use. Please master th
 # document
 
 Installation and usage: https://233boy.com/sing-box/sing-box-script/
-
-# And for the quick & lazy...
-```
-bash <(wget -qO- -o- https://github.com/quartzyeti/sing-box/raw/main/install.sh)
-```
-
-
 
 # help
 
