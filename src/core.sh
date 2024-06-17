@@ -49,22 +49,22 @@ info_list=(
     "Address"
     "Port"
     "User ID (id)"
-    "Transmission protocol (network)"
+    "Transportation Protocol (network)"
     "Disguise type"
     "Fake domain name (host)"
-    "path"
+    "Path"
     "Transport Layer Security (TLS)"
     "Application Layer Protocol Negotiation (Alpn)"
     "Password"
-    "Encryption"
+    "Encryption Method"
     "Link (URL)"
     "Destination Address (remote addr)"
     "Destination Port (remote port)"
-    "Flow"
+    "Flow Control"
     "SNI (servername)"
     "Fingerprint"
     "Public key"
-    "Username"
+    "User ID (Username)"
     "Skip Certificate Verification (allowInsecure)"
     "Congestion Control Algorithm (congestion_control)"
 )
@@ -80,7 +80,7 @@ change_list=(
     "Change Destination Port"
     "Change Key"
     "Change SNI (serverName)"
-    "Change Cloaking Site"
+    "Change the Camouflage Site"
     "Change Username"
 )
 servername_list=(
@@ -129,7 +129,7 @@ get_port() {
     while :; do
         ((is_count++))
         if [[ $is_count -ge 233 ]]; then
-            err "The number of failed attempts to obtain available ports has reached 233, please check the port usage."
+            err "Failed to find an open port after 233 attempts. Check for other programs using the ports you need"
         fi
         tmp_port=$(shuf -i 445-65535 -n 1)
         [[ ! $(is_test port_used $tmp_port) && $tmp_port != $port ]] && break
@@ -263,11 +263,11 @@ ask() {
         if [[ ! $is_tmp_list ]]; then
             [[ $(grep port <<<$is_ask_set) ]] && {
                 [[ ! $(is_test port "$REPLY") ]] && {
-                    msg "$is_err Please enter the correct port, optional (1-65535)"
+                    msg "$is_err Please enter an actual port number. Options: (1-65535)"
                     continue
                 }
                 if [[ $(is_test port_used $REPLY) && $is_ask_set != 'door_port' ]]; then
-                    msg "$is_err Unable to use ($REPLY) port."
+                    msg "$is_err Unable to use the ($REPLY) port."
                     continue
                 fi
             }
@@ -286,13 +286,13 @@ ask() {
                 msg "Please enter (y)"
                 continue
             }
-            [[ $REPLY ]] && export $is_ask_set=$REPLY && msg "Use: ${!is_ask_set}" && break
+            [[ $REPLY ]] && export $is_ask_set=$REPLY && msg "Using: ${!is_ask_set}" && break
         else
             [[ $(is_test number "$REPLY") ]] && is_ask_result=${is_tmp_list[$REPLY - 1]}
-            [[ $is_ask_result ]] && export $is_ask_set="$is_ask_result" && msg "Select: ${!is_ask_set}" && break
+            [[ $is_ask_result ]] && export $is_ask_set="$is_ask_result" && msg "Selected: ${!is_ask_set}" && break
         fi
 
-        msg "Enter ${is_err}"
+        msg "Input ${is_err}"
     done
     unset is_opt_msg is_opt_input_msg is_tmp_list is_ask_result is_default_arg is_emtpy_exit
 }
